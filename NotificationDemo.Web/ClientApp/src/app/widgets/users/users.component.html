@@ -1,0 +1,58 @@
+<div class="card-columns cols-2">
+    <div class="my-3 p-3 bg-white rounded box-shadow card">
+        <div class="border-bottom pb-2 mb-0 justify-content-between d-flex">
+            <h5>Зарегистрированные пользователи</h5>
+        </div>
+        <div class="media text-muted pt-3" *ngFor="let u of users">
+            <div class="media-body pb-3 mb-0 small lh-125 border-bottom">
+                <h5 class="d-block text-gray-dark">
+                    <input type="checkbox" [(ngModel)]="u.selected"/>
+                    {{u.user.login}}
+                </h5>
+                <div class="table-responsive">
+                    <table class="table table-striped table-sm">
+                        <thead>
+                            <tr>
+                                <th>#</th>
+                                <th>Endpoint</th>
+                                <th>Expiration Time</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr *ngFor="let s of u.subscriptions; let i = index">
+                                <td>{{i+1}}</td>
+                                <td>{{s.endpoint}}</td>
+                                <td>{{s.expirationTime}}</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="my-3 p-3 bg-white rounded box-shadow card">
+        <div class="border-bottom pb-2 mb-0 justify-content-between d-flex">
+            <h5>Отправка сообщения</h5>
+        </div>
+        <form #formMessage="ngForm" (ngSubmit)="submit()">
+            <div class="row p-2">
+                <label for="title">Заголовок</label>
+                <input type="text" [(ngModel)]="model.title"
+                       class="w-100 form-control"
+                       [ngClass]="title?.errors?.required ? 'is-invalid' : ''"
+                       name="title" id="title" required maxlength="500"/>
+            </div>
+            <div class="row p-2">
+                <label for="title">Сообщение</label>
+                <textarea rows="10"
+                      class="w-100 form-control"
+                      [ngClass]="body?.errors?.required ? 'is-invalid' : ''"
+                      name="body" id="body" required maxlength="2000"
+                      [(ngModel)]="model.body"></textarea>
+            </div>
+            <div class="text-right">
+                <button type="submit" class="btn btn-outline-primary">Отправить сообщение себе</button>
+            </div>
+        </form>
+    </div>
+</div>

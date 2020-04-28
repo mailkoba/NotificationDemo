@@ -1,0 +1,44 @@
+<div class="app-body app login-page">
+    <main class="main d-flex align-items-center">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 mx-auto">
+                    <h1>Notification Demo</h1>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6 mx-auto">
+                    <div class="card-group">
+                        <div class="card p-4">
+                            <div class="card-body">
+                                <form #form="ngForm" (ngSubmit)="submit()">
+                                    <div class="input-group mb-3">
+                                        <div class="btn-group-sm ml-auto" dropdown style="width: 100%">
+                                            <button dropdownToggle type="button" class="btn btn-sm btn-outline-secondary dropdown-toggle w-100" style="text-align: left">
+                                                <i class="fa fa-user fa-lg"></i>
+                                                <span class="w-95 d-inline-block">&nbsp;{{model.username}}</span>
+                                            </button>
+                                            <ul *dropdownMenu class="dropdown-menu" role="menu">
+                                                <li role="menuitem" *ngFor="let login of logins">
+                                                    <a class="dropdown-item" (click)="selectUser(login)">{{login}}</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-12" *ngIf="message!=='' && message!==null">
+                                            <alert type="danger">{{message}}</alert>
+                                        </div>
+                                        <div class="col-6">
+                                            <button type="submit" class="btn btn-primary px-4">Войти</button>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+</div>

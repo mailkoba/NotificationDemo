@@ -1,0 +1,14 @@
+<div class="my-3 p-3 bg-white rounded box-shadow card">
+    <p *ngIf="!(subscribed | async)">
+        <alert type="info">
+            Подписка на уведомления отсутствует.
+        </alert>
+        <button type="button" class="btn btn-info btn-primary" (click)="subscribe()">Подписаться на уведомления</button>
+    </p>
+    <p *ngIf="subscribed | async">
+        <alert type="success">
+            <strong>OK!</strong> Подписка на уведомления оформлена.
+        </alert>
+        <button type="button" class="btn btn-danger btn-primary" (click)="unsubscribe()">Отписаться</button>
+    </p>
+</div>

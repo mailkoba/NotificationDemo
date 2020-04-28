@@ -1,0 +1,269 @@
+a {
+    color: #0366d6;
+}
+
+code {
+    color: #e01a76;
+}
+
+.btn-primary {
+    color: #fff;
+    background-color: #1b6ec2;
+    border-color: #1861ac;
+}
+
+.login-page {
+    margin-top: 0 !important;
+}
+
+.login-page .main {
+    margin-left: 0 !important;
+}
+
+.spinner {
+    position: relative;
+    display: inline-block;
+    min-height: 3rem;
+    min-width: 3rem;
+    height: 3rem;
+    width: 3rem;
+    -webkit-animation: spin 1s linear infinite;
+    animation: spin 1s linear infinite;
+    margin: 0;
+    padding: 0;
+    background: url("data:image/svg+xml;charset=utf8,%3Csvg%20id%3D%22Layer_2%22%20data-name%3D%22Layer%202%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2072%2072%22%3E%0A%20%20%20%20%3Cdefs%3E%0A%20%20%20%20%20%20%20%20%3Cstyle%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20.cls-1%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20.cls-2%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20fill%3A%20none%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20stroke-miterlimit%3A%2010%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20stroke-width%3A%205px%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20%20%20%20%20%20%20.cls-1%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20stroke%3A%20%23000000%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20stroke-opacity%3A%200.15%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20%20%20%20%20%20%20.cls-2%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20stroke%3A%20%230077b8%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20%20%20%3C%2Fstyle%3E%0A%20%20%20%20%3C%2Fdefs%3E%0A%20%20%20%20%3Ctitle%3EPreloader_72x2%3C%2Ftitle%3E%0A%20%20%20%20%3Ccircle%20class%3D%22cls-1%22%20cx%3D%2236%22%20cy%3D%2236%22%20r%3D%2233%22%2F%3E%0A%20%20%20%20%3Cpath%20class%3D%22cls-2%22%20d%3D%22M14.3%2C60.9A33%2C33%2C0%2C0%2C1%2C36%2C3%22%3E%0A%20%20%20%20%3C%2Fpath%3E%0A%3C%2Fsvg%3E%0A");
+    text-indent: 100%;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+@keyframes spin {
+    0% {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+
+    100% {
+        -webkit-transform: rotate(359deg);
+        transform: rotate(359deg);
+    }
+}
+
+.child-window {
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 9999;
+    position: fixed;
+    visibility: hidden;
+    text-align: center;
+    background: rgba(221, 221, 221, 0.7);
+    overflow: auto;
+    -webkit-overflow-scrolling: touch;
+    -webkit-transition: opacity 0.3s, visibility 0.3s;
+    transition: opacity 0.3s, visibility 0.3s;
+    -webkit-backface-visibility: hidden;
+    -ms-backface-visibility: hidden;
+    backface-visibility: hidden;
+    -webkit-perspective: 1000;
+    -ms-perspective: 1000;
+    perspective: 1000;
+}
+
+.child-window::before {
+    top: 50%;
+    left: 50%;
+    padding: 0;
+    width: 1em;
+    height: 1em;
+    position: absolute;
+    font-size: 48px;
+    margin: -0.5em 0 0 -0.5em;
+}
+
+.child-window::after {
+    width: 0;
+    content: '';
+    height: 100%;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.child-window .placeholder {
+    max-width: 90%;
+    text-align: left;
+    position: relative;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+app-dashboard {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+*, ::after, ::before {
+    box-sizing: border-box;
+}
+
+.footer, .header, .main {
+    transition: margin-left 0.25s ease 0s, margin-right 0.25s ease 0s, width 0.25s ease 0s, flex 0.25s ease 0s, -ms-flex 0.25s ease 0s;
+}
+
+.footer {
+    flex: 0 0 50px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    padding: 0 1rem;
+    color: #23282c;
+    background: #f0f3f5;
+    border-top: 1px solid #c8ced3;
+}
+
+.main {
+    min-width: 0;
+    flex: 1 1 0;
+    display: block;
+    height: 100%;
+    padding-top: 50px;
+}
+
+@media screen and (-ms-high-contrast: active), screen and (-ms-high-contrast: none) {
+    /* IE10+ specific styles go here */
+    .main {
+        flex: none;
+    }
+}
+
+.app {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+body {
+    margin: 0;
+    font-family: -apple-system,BlinkMacSystemFont,segoe ui,Roboto,helvetica neue,Arial,sans-serif,apple color emoji,segoe ui emoji,segoe ui symbol,noto color emoji;
+    font-size: .875rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #23282c;
+    text-align: left;
+    background-color: #e4e5e6;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+}
+
+@media screen and (min-width: 992px) {
+    .header {
+        position: fixed;
+        z-index: 1020;
+        width: 100%;
+    }
+
+        .header .app {
+            margin-top: 55px;
+        }
+}
+
+.navbar-brand {
+    padding: 0;
+}
+
+.box-shadow {
+    box-shadow: 0 0.5rem 0.75rem rgba(0, 0, 0, .05);
+}
+
+.chart-wrapper canvas {
+    width: 100%;
+}
+
+@-webkit-keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+.fadeIn {
+    -webkit-animation-name: fadeIn;
+    animation-name: fadeIn;
+}
+
+.animated {
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+}
+
+.widget-3 {
+    -ms-flex: 0 0 100%;
+    flex: 0 0 100%;
+    max-width: 100%;
+    position: relative;
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    padding-top: 7px;
+    padding-bottom: 7px;
+}
+
+@media screen and (min-width: 576px) {
+    .card-columns.cols-2 {
+        -webkit-column-count: 2;
+        -moz-column-count: 2;
+        column-count: 2;
+    }
+
+    .cols-1 {
+        -webkit-column-count: 1;
+        -moz-column-count: 1;
+        column-count: 1;
+    }
+}
+
+@media screen and (min-width: 992px) {
+    .widget-3 {
+        -ms-flex: 0 0 50%;
+        flex: 0 0 50%;
+        max-width: 50%;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .widget-3 {
+        -ms-flex: 0 0 33.333333%;
+        flex: 0 0 33.333333%;
+        max-width: 33.333333%;
+    }
+}
+
+.btn-group-sm a.dropdown-item,
+.filters-header,
+.exit-link,
+.page-item {
+    cursor: pointer;
+}
+
+.w-95 {
+    width: 95% !important;
+}
